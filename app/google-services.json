@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "337948665662",
+    "project_id": "productmanagementkotlin",
+    "storage_bucket": "productmanagementkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337948665662:android:f4d52af73979d35ba4ae6f",
+        "android_client_info": {
+          "package_name": "com.example.productmanagementkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337948665662-dljv2o3j06rpon4sd7rb3o3m9n91g8uv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCseInHlx1F9WFRAmFM6hqJEhr0HJzh34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337948665662-dljv2o3j06rpon4sd7rb3o3m9n91g8uv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
