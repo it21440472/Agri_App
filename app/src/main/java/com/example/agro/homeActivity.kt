@@ -7,8 +7,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
-import com.example.agro.activities.FetchingActivity
-import com.example.agro.activities.InsertionActivity
 import com.example.agro.activities.MycropActivity
 import com.example.agro.activities.SignActivity
 import com.google.firebase.auth.FirebaseAuth

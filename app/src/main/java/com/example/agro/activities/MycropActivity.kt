@@ -21,12 +21,12 @@ class MycropActivity : AppCompatActivity() {
         btnFetchData = findViewById(R.id.btnFetchData)
 
         btnInsertData.setOnClickListener {
-            val intent = Intent(this, InsertionActivity::class.java)
+            val intent = Intent(this, CropInsertionActivity::class.java)
             startActivity(intent)
         }
 
         btnFetchData.setOnClickListener {
-            val intent = Intent(this, FetchingActivity::class.java)
+            val intent = Intent(this, CropFetchingActivity::class.java)
             startActivity(intent)
         }
 

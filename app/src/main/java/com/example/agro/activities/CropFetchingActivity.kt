@@ -17,7 +17,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class FetchingActivity : AppCompatActivity() {
+class CropFetchingActivity : AppCompatActivity() {
 
     private lateinit var cropRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
@@ -59,7 +59,7 @@ class FetchingActivity : AppCompatActivity() {
                     mAdapter.setOnItemClickListener(object : CropAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
 
-                            val intent = Intent(this@FetchingActivity, CropDetailsActivity::class.java)
+                            val intent = Intent(this@CropFetchingActivity, CropDetailsActivity::class.java)
 
                             //put extras
                             intent.putExtra("cropId", cropList[position].cropID)

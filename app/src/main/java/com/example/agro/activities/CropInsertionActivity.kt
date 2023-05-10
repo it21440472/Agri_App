@@ -10,7 +10,7 @@ import com.example.agro.models.cropModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class InsertionActivity : AppCompatActivity() {
+class CropInsertionActivity : AppCompatActivity() {
 
     private lateinit var addcropname: EditText
     private lateinit var addcroptype: EditText

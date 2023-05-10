@@ -30,10 +30,10 @@
             android:name=".CropDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.FetchingActivity"
+            android:name=".activities.CropFetchingActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.InsertionActivity"
+            android:name=".activities.CropInsertionActivity"
             android:exported="false" />
         <activity
             android:name=".activities.MycropActivity"

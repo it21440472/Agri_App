@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.agro.activities.FetchingActivity
+import com.example.agro.activities.CropFetchingActivity
 import com.example.agro.models.cropModel
 import com.google.firebase.database.FirebaseDatabase
 
@@ -86,7 +86,7 @@ class CropDetailsActivity : AppCompatActivity() {
         mTask.addOnSuccessListener {
             Toast.makeText(this, "Crop data deleted", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, FetchingActivity::class.java)
+            val intent = Intent(this, CropFetchingActivity::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{ error ->
