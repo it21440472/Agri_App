@@ -1,10 +1,16 @@
 package com.example.agro.activities
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.app.NotificationCompat
 import com.example.agro.R
 import com.example.agro.models.cropModel
 import com.google.firebase.database.DatabaseReference
@@ -36,7 +42,26 @@ class CropInsertionActivity : AppCompatActivity() {
 
         btnSaveData.setOnClickListener {
             savecropData()
+
+
+
+
         }
+
+        val calbutton = findViewById<Button>(R.id.calbutton);
+
+        // Set the onClickListener for the "Start" button
+        calbutton.setOnClickListener(){
+            // Create an intent to start the Dashboard activity
+            val intenta = Intent(this, CalActivity::class.java)
+            // Start the Dashboard activity and finish the MainActivity
+            startActivity(intenta)
+            finish()
+        }
+
+
+
+
     }
 
     private fun savecropData() {
@@ -48,8 +73,13 @@ class CropInsertionActivity : AppCompatActivity() {
         val cwork = addcropwork.text.toString()
         val cexp = addcropExp.text.toString()
 
+
+
         if (cname.isEmpty() || ctype.isEmpty() || csize.isEmpty() || cwork.isEmpty() || cexp.isEmpty()) {
             Toast.makeText(this, "Fill", Toast.LENGTH_LONG).show()
+
+
+
             return
         }
 
@@ -60,9 +90,14 @@ class CropInsertionActivity : AppCompatActivity() {
         dbRef.child(cropID).setValue(crop)
             .addOnCompleteListener {
                 Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
+
+
+
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
+
+
 
     }
 }

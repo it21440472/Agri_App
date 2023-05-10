@@ -114,4 +114,16 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/calbutton"
+        android:layout_width="180dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/backstyle"
+        android:text="Use calculator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
