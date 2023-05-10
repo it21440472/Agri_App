@@ -17,7 +17,8 @@ class ExampleUnitTest {
 
     @Test
     fun testValidatorWithInvalidName() {
-        // Create a new Validator empty name
+        // Create a new Validator emp
+        // ty name
         val validator = Validator("", "type1", 10, 20, 30)
 
         // Check if the name is invalid
