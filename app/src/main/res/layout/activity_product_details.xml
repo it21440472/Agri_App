@@ -13,15 +13,15 @@
         android:layout_height="228dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/thakkali2"
+        app:srcCompat="@drawable/salad"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="100dp"/>
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:backgroundTint="#D306A132"
+        android:backgroundTint="@color/app_theme"
         android:text="Update"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
         app:layout_constraintHorizontal_bias="0.5"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:backgroundTint="#FF0000"
+        android:backgroundTint="#85FF0000"
         android:text="Delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -42,11 +42,12 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="404dp"
-        android:layout_height="517dp"
+        android:layout_width="397dp"
+        android:layout_height="557dp"
+        android:layout_marginStart="7dp"
+
+        android:layout_marginTop="39dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -63,24 +64,6 @@
 
             >
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.6"
-                android:background="#198541"
-
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Product id"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -88,16 +71,16 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvEmpId"
+                    android:id="@+id/tvProductId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:hint="1243"
                     android:text=""
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:hint="1243"
-                    />
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
@@ -108,7 +91,7 @@
         <LinearLayout
             android:id="@+id/contact_lin"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
@@ -137,15 +120,15 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvEmpName"
+                    android:id="@+id/tvProductName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:hint="Tomatos"
                     android:text=""
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:hint="Thakkali"
 
                     />
 
@@ -157,7 +140,7 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
@@ -169,7 +152,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="#198541">
+                android:background="@color/edit_text_boarder">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -191,12 +174,12 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvEmpAge"
+                    android:id="@+id/tvProductPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="rs.1000"
+                    android:hint="rs.100(500g)"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -211,7 +194,7 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
@@ -246,15 +229,15 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvEmpSalary"
+                    android:id="@+id/tvProductDescription"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:hint="freshly harvested tomatos for sale"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/backstyle"
                     android:textSize="15sp"
-                    android:hint="freshly harvested tomato for sale"
 
                     />
 

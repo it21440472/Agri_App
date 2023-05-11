@@ -28,7 +28,9 @@ class pAdapter(private val empList: ArrayList<ProductModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentEmp = empList[position]
-        holder.tvEmpName.text = currentEmp.pName
+        holder.tvpName.text = currentEmp.pName
+        holder.tvpPrice.text = currentEmp.pPrice
+        holder.tvpDescription.text = currentEmp.pDescription
     }
 
     override fun getItemCount(): Int {
@@ -37,8 +39,9 @@ class pAdapter(private val empList: ArrayList<ProductModel>) :
 
     class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
-        val tvEmpName : TextView = itemView.findViewById(R.id.tvEmpName)
-
+        val tvpName : TextView = itemView.findViewById(R.id.tvProductName)
+        val tvpPrice : TextView = itemView.findViewById(R.id.tvProductPrice)
+        val tvpDescription : TextView = itemView.findViewById(R.id.tvProductDescription)
         init {
             itemView.setOnClickListener {
                 clickListener.onItemClick(adapterPosition)

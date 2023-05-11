@@ -64,8 +64,8 @@ class FetchingActivity : AppCompatActivity() {
                             //put extras
                             intent.putExtra("empId", pList[position].pId)
                             intent.putExtra("empName", pList[position].pName)
-                            intent.putExtra("empAge", pList[position].pAge)
-                            intent.putExtra("empSalary", pList[position].pSalary)
+                            intent.putExtra("empAge", pList[position].pPrice)
+                            intent.putExtra("empSalary", pList[position].pDescription)
                             startActivity(intent)
                         }
 

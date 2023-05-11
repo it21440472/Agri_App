@@ -47,10 +47,10 @@ class ProductDetailsActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        tvEmpId = findViewById(R.id.tvEmpId)
-        tvEmpName = findViewById(R.id.tvEmpName)
-        tvEmpAge = findViewById(R.id.tvEmpAge)
-        tvEmpSalary = findViewById(R.id.tvEmpSalary)
+        tvEmpId = findViewById(R.id.tvProductId)
+        tvEmpName = findViewById(R.id.tvProductName)
+        tvEmpAge = findViewById(R.id.tvProductPrice)
+        tvEmpSalary = findViewById(R.id.tvProductDescription)
 
         btnUpdate = findViewById(R.id.btnUpdate)
         btnDelete = findViewById(R.id.btnDelete)
@@ -91,9 +91,9 @@ class ProductDetailsActivity : AppCompatActivity() {
 
         mDialog.setView(mDialogView)
 
-        val etEmpName = mDialogView.findViewById<EditText>(R.id.etEmpName)
-        val etEmpAge = mDialogView.findViewById<EditText>(R.id.etEmpAge)
-        val etEmpSalary = mDialogView.findViewById<EditText>(R.id.etEmpSalary)
+        val etEmpName = mDialogView.findViewById<EditText>(R.id.etProductName)
+        val etEmpAge = mDialogView.findViewById<EditText>(R.id.etProductPrice)
+        val etEmpSalary = mDialogView.findViewById<EditText>(R.id.etProductDescription)
 
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 

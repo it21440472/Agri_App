@@ -25,9 +25,9 @@ class InsertionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_insertion)
 
-        productName = findViewById(R.id.etEmpName)
-        productPrice = findViewById(R.id.etEmpAge)
-        productDescription = findViewById(R.id.etEmpSalary)
+        productName = findViewById(R.id.etProductName)
+        productPrice = findViewById(R.id.etProductPrice)
+        productDescription = findViewById(R.id.etProductDescription)
         btnSaveData = findViewById(R.id.btnSave)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Products")
@@ -39,39 +39,39 @@ class InsertionActivity : AppCompatActivity() {
     }
 
     private fun saveProductData() {
-
         //getting values
-        val empName = productName.text.toString()
-        val empAge = productPrice.text.toString()
-        val empSalary = productDescription.text.toString()
+        val empName = productName.text.toString().trim()
+        val empAge = productPrice.text.toString().trim()
+        val empSalary = productDescription.text.toString().trim()
 
         if (empName.isEmpty()) {
             productName.error = "Please enter name"
+            return
         }
         if (empAge.isEmpty()) {
-            productPrice.error = "Please enter age"
+            productPrice.error = "Please enter Price"
+            return
         }
         if (empSalary.isEmpty()) {
-            productDescription.error = "Please enter salary"
+            productDescription.error = "Please enter Description"
+            return
         }
 
         val empId = dbRef.push().key!!
 
-        val employee = ProductModel(empId, empName, empAge, empSalary)
+        val product = ProductModel(empId, empName, empAge, empSalary)
 
-        dbRef.child(empId).setValue(employee)
+        dbRef.child(empId).setValue(product)
             .addOnCompleteListener {
                 Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
 
                 productName.text.clear()
                 productPrice.text.clear()
                 productDescription.text.clear()
-
-
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
-
     }
 
 }
+
