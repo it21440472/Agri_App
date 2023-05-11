@@ -47,7 +47,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
-                android:text="Thakkali"
+                android:text="Tomato"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
