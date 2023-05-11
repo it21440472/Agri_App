@@ -28,7 +28,7 @@ class pAdapter(private val empList: ArrayList<ProductModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentEmp = empList[position]
-        holder.tvEmpName.text = currentEmp.empName
+        holder.tvEmpName.text = currentEmp.pName
     }
 
     override fun getItemCount(): Int {

@@ -8,7 +8,7 @@
     tools:context=".activities.ProductDetailsActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/circleImageView"
         android:layout_width="213dp"
         android:layout_height="228dp"
         app:layout_constraintStart_toStartOf="parent"

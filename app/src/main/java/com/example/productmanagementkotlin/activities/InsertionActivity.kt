@@ -30,7 +30,7 @@ class InsertionActivity : AppCompatActivity() {
         productDescription = findViewById(R.id.etEmpSalary)
         btnSaveData = findViewById(R.id.btnSave)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Employees")
+        dbRef = FirebaseDatabase.getInstance().getReference("Products")
 
 
         btnSaveData.setOnClickListener {
@@ -70,8 +70,8 @@ class InsertionActivity : AppCompatActivity() {
 
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
-                }
+            }
 
-        }
+    }
 
 }

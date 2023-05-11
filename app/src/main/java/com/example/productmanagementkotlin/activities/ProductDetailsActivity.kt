@@ -67,11 +67,11 @@ class ProductDetailsActivity : AppCompatActivity() {
     private fun deleteRecord(
         id: String
     ){
-        val dbRef = FirebaseDatabase.getInstance().getReference("Employees").child(id)
+        val dbRef = FirebaseDatabase.getInstance().getReference("Products").child(id)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Employee data deleted", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, " data deleted", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, FetchingActivity::class.java)
             finish()
@@ -114,7 +114,7 @@ class ProductDetailsActivity : AppCompatActivity() {
                 etEmpSalary.text.toString()
             )
 
-            Toast.makeText(applicationContext, "Employee Data Updated", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, " Data Updated", Toast.LENGTH_LONG).show()
 
             //we are setting updated data to our textviews
             tvEmpName.text = etEmpName.text.toString()
@@ -131,7 +131,7 @@ class ProductDetailsActivity : AppCompatActivity() {
         age: String,
         salary: String
     ) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("Employees").child(id)
+        val dbRef = FirebaseDatabase.getInstance().getReference("Products").child(id)
         val empInfo = ProductModel(id, name, age, salary)
         dbRef.setValue(empInfo)
     }
